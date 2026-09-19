@@ -1,5 +1,5 @@
 {
-  "name": "iobroker.nibe-rest-api",
+  "name": "iobroker.rest-api-test",
   "version": "0.0.3",
   "description": "Read and write datapoints of your Nibe Heatpump via REST API (integrated from Firmware 4.6.4). Developed with my Nibe S1155.",
   "author": {
@@ -7,7 +7,7 @@
     "email": "maxi_kramer@web.de"
   },
   "contributors": [],
-  "homepage": "https://github.com/maxik690/ioBroker.nibe-rest-api",
+  "homepage": "https://github.com/Moratie/ioBroker.nibe-rest-api-test",
   "license": "MIT",
   "keywords": [
     "ioBroker",
@@ -18,7 +18,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git@github.com:maxik690/ioBroker.nibe-rest-api.git"
+    "url": "git@github.com:Moratie/ioBroker.nibe-rest-api-test.git"
   },
   "engines": {
     "node": ">= 20"
@@ -86,7 +86,7 @@
     "dev-server": "dev-server"
   },
   "bugs": {
-    "url": "https://github.com/maxik690/ioBroker.nibe-rest-api/issues"
+    "url": "https://github.com/Moratie/ioBroker.nibe-rest-api-test/issues"
   },
   "readmeFilename": "README.md"
 }

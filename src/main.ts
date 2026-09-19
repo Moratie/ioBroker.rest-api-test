@@ -181,7 +181,7 @@ const INVISIBLE_WORD_JOINERS =
 const COMBINING_MARKS = /[\u0300-\u036f]/g;
 
 /** ioBroker adapter for synchronizing NIBE heat pump data via the local REST API. */
-export class NibeRestApi extends utils.Adapter {
+export class RestApiTest extends utils.Adapter {
     private static readonly API_REQUEST_TIMEOUT_MS = 15000;
     private pollTimer: ioBroker.Timeout | undefined;
     private customPollTimer: ioBroker.Timeout | undefined;
@@ -206,7 +206,7 @@ export class NibeRestApi extends utils.Adapter {
     public constructor(options: Partial<utils.AdapterOptions> = {}) {
         super({
             ...options,
-            name: "nibe-rest-api",
+            name: "rest-api-test",
         });
 
         this.on("ready", this.onReady.bind(this));
@@ -1223,7 +1223,7 @@ export class NibeRestApi extends utils.Adapter {
         }
 
         const compactDetails = details.replace(/\s+/g, " ").trim();
-        const tlsMode = discoveryConfig?.ignoreTlsErrors ?? this.config.ignoreTlsErrors ? "tls=ignore" : "tls=strict";
+        const tlsMode = (discoveryConfig?.ignoreTlsErrors ?? this.config.ignoreTlsErrors) ? "tls=ignore" : "tls=strict";
         return `${options.method ?? "GET"} ${requestPath.pathname}${requestPath.search} at ${requestPath.origin} failed: ${compactDetails} (auth=${this.getAuthorizationMode(discoveryConfig)}, ${tlsMode})`;
     }
 
@@ -1306,10 +1306,10 @@ export class NibeRestApi extends utils.Adapter {
                     ),
                 );
             });
-            request.setTimeout(NibeRestApi.API_REQUEST_TIMEOUT_MS, () => {
+            request.setTimeout(RestApiTest.API_REQUEST_TIMEOUT_MS, () => {
                 request.destroy(
                     new Error(
-                        `Request timeout after ${NibeRestApi.API_REQUEST_TIMEOUT_MS}ms for ${requestPath.pathname}${requestPath.search}`,
+                        `Request timeout after ${RestApiTest.API_REQUEST_TIMEOUT_MS}ms for ${requestPath.pathname}${requestPath.search}`,
                     ),
                 );
             });
@@ -1960,7 +1960,7 @@ export class NibeRestApi extends utils.Adapter {
 }
 
 if (require.main !== module) {
-    module.exports = (options: Partial<utils.AdapterOptions> | undefined) => new NibeRestApi(options);
+    module.exports = (options: Partial<utils.AdapterOptions> | undefined) => new RestApiTest(options);
 } else {
-    (() => new NibeRestApi())();
+    (() => new RestApiTest())();
 }

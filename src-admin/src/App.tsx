@@ -48,7 +48,7 @@ import pt from "../../admin/i18n/pt.json";
 import ru from "../../admin/i18n/ru.json";
 import uk from "../../admin/i18n/uk.json";
 import zhCn from "../../admin/i18n/zh-cn.json";
-import logoUrl from "../../admin/nibe-rest-api-wide.png";
+import logoUrl from "../../admin/rest-api-test-wide.png";
 
 const COMPLETE_POLL_FILTER_VALUE = "__complete_poll__";
 const DEFAULT_DISCOVERY_ROWS_PER_PAGE = 20;
@@ -263,7 +263,7 @@ export default class App extends GenericApp<GenericAppProps, AppState> {
         const socketPort = parseInt(window.location.port, 10) || 8081;
         super(props, {
             ...props,
-            adapterName: "nibe-rest-api",
+            adapterName: "rest-api-test",
             encryptedFields: ["password"],
             doNotLoadAllObjects: true,
             doNotLoadACL: true,
@@ -1675,7 +1675,7 @@ export default class App extends GenericApp<GenericAppProps, AppState> {
                         <Box
                             component="img"
                             src={logoUrl}
-                            alt="NIBE REST API"
+                            alt="REST API TEST"
                             sx={{ width: 320, maxWidth: "100%", height: "auto" }}
                         />
                         <Box>
@@ -1683,7 +1683,7 @@ export default class App extends GenericApp<GenericAppProps, AppState> {
                                 variant="h5"
                                 sx={{ mt: 0, mb: 0.5 }}
                             >
-                                NIBE REST API
+                                REST API TEST
                             </Typography>
                             <Typography
                                 variant="body2"

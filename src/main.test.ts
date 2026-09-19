@@ -1,8 +1,8 @@
 import { expect } from "chai";
-import { NibeRestApi } from "./main";
+import { RestApiTest } from "./main";
 
 describe("point state id normalization", () => {
-    const adapter = new NibeRestApi({ name: "nibe-rest-api-test" });
+    const adapter = new RestApiTest({ name: "rest-api-test-unit" });
 
     after(() => {
         adapter.removeAllListeners();
@@ -27,7 +27,7 @@ describe("point state id normalization", () => {
 });
 
 describe("write lock interval", () => {
-    const adapter = new NibeRestApi({ name: "nibe-rest-api-test-lock" });
+    const adapter = new RestApiTest({ name: "rest-api-test-lock" });
     const adapterInternals = adapter as unknown as {
         config: { writeLockInterval?: number };
         ensureWriteLockElapsed: (stateId: string) => void;

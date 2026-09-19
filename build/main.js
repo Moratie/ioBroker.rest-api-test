@@ -28,7 +28,7 @@ var __toESM = (mod, isNodeMode, target) => (target = mod != null ? __create(__ge
 var __toCommonJS = (mod) => __copyProps(__defProp({}, "__esModule", { value: true }), mod);
 var main_exports = {};
 __export(main_exports, {
-  NibeRestApi: () => NibeRestApi
+  RestApiTest: () => RestApiTest
 });
 module.exports = __toCommonJS(main_exports);
 var utils = __toESM(require("@iobroker/adapter-core"));
@@ -37,7 +37,7 @@ var https = __toESM(require("node:https"));
 const NO_ENABLED_DEVICES_MARKER = "__none__";
 const INVISIBLE_WORD_JOINERS = /\u00AD|\u034F|\u061C|\u115F|\u1160|\u17B4|\u17B5|\u180B|\u180C|\u180D|\u200B|\u200C|\u200D|\u200E|\u200F|\u202A|\u202B|\u202C|\u202D|\u202E|\u2060|\u2061|\u2062|\u2063|\u2064|\u2065|\u2066|\u2067|\u2068|\u2069|\u206A|\u206B|\u206C|\u206D|\u206E|\u206F|\uFE00|\uFE01|\uFE02|\uFE03|\uFE04|\uFE05|\uFE06|\uFE07|\uFE08|\uFE09|\uFE0A|\uFE0B|\uFE0C|\uFE0D|\uFE0E|\uFE0F|\uFEFF/gu;
 const COMBINING_MARKS = /[\u0300-\u036f]/g;
-class NibeRestApi extends utils.Adapter {
+class RestApiTest extends utils.Adapter {
   static API_REQUEST_TIMEOUT_MS = 15e3;
   pollTimer;
   customPollTimer;
@@ -61,7 +61,7 @@ class NibeRestApi extends utils.Adapter {
   constructor(options = {}) {
     super({
       ...options,
-      name: "nibe-rest-api"
+      name: "rest-api-test"
     });
     this.on("ready", this.onReady.bind(this));
     this.on("stateChange", this.onStateChange.bind(this));
@@ -991,10 +991,10 @@ class NibeRestApi extends utils.Adapter {
           )
         );
       });
-      request.setTimeout(NibeRestApi.API_REQUEST_TIMEOUT_MS, () => {
+      request.setTimeout(RestApiTest.API_REQUEST_TIMEOUT_MS, () => {
         request.destroy(
           new Error(
-            `Request timeout after ${NibeRestApi.API_REQUEST_TIMEOUT_MS}ms for ${requestPath.pathname}${requestPath.search}`
+            `Request timeout after ${RestApiTest.API_REQUEST_TIMEOUT_MS}ms for ${requestPath.pathname}${requestPath.search}`
           )
         );
       });
@@ -1522,12 +1522,12 @@ Point ID: ${pointId}` : `Point ID: ${pointId}`;
   }
 }
 if (require.main !== module) {
-  module.exports = (options) => new NibeRestApi(options);
+  module.exports = (options) => new RestApiTest(options);
 } else {
-  (() => new NibeRestApi())();
+  (() => new RestApiTest())();
 }
 // Annotate the CommonJS export names for ESM import in node:
 0 && (module.exports = {
-  NibeRestApi
+  RestApiTest
 });
 //# sourceMappingURL=main.js.map

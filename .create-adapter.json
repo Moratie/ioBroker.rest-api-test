@@ -1,8 +1,8 @@
 {
     "cli": true,
     "target": "directory",
-    "adapterName": "nibe-rest-api",
-    "title": "Nibe REST API",
+    "adapterName": "rest-api-test",
+    "title": "REST API Test",
     "description": "Read and write datapoints of your Nibe Heatpump via REST API (integrated from Firmware 4.6.4). Developed with my Nibe S1155.",
     "keywords": ["Nibe", "S1155", "iot", "heatpump"],
     "expert": "yes",

@@ -1,6 +1,6 @@
 {
   "common": {
-    "name": "nibe-rest-api",
+    "name": "rest-api-test",
     "version": "0.0.3",
     "news": {
       "0.0.3": {
@@ -18,8 +18,8 @@
       }
     },
     "titleLang": {
-      "en": "Nibe REST API",
-      "de": "Nibe REST-API",
+      "en": "REST API Test",
+      "de": "REST-API-Test",
       "ru": "Нибе REST API",
       "pt": "API REST do Nibe",
       "nl": "Nibe REST-API",
@@ -27,7 +27,7 @@
       "it": "API REST Nibe",
       "es": "API REST de Nibe",
       "pl": "API REST Nibe’a",
-      "uk": "Nibe REST API",
+      "uk": "REST API Test",
       "zh-cn": "尼贝 REST API"
     },
     "desc": {
@@ -57,10 +57,10 @@
       "license": "MIT"
     },
     "platform": "Javascript/Node.js",
-    "icon": "nibe-rest-api.png",
+    "icon": "rest-api-test.png",
     "enabled": true,
-    "extIcon": "https://raw.githubusercontent.com/maxik690/ioBroker.nibe-rest-api/main/admin/nibe-rest-api.png",
-    "readme": "https://github.com/maxik690/ioBroker.nibe-rest-api/blob/main/README.md",
+    "extIcon": "https://raw.githubusercontent.com/Moratie/ioBroker.nibe-rest-api-test/main/admin/rest-api-test.png",
+    "readme": "https://github.com/Moratie/ioBroker.nibe-rest-api-test/blob/main/README.md",
     "loglevel": "info",
     "tier": 3,
     "mode": "daemon",

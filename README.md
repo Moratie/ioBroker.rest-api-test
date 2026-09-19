@@ -1,17 +1,17 @@
-![Logo](admin/nibe-rest-api-wide.png)
+![Logo](admin/rest-api-test-wide.png)
 
-# ioBroker.nibe-rest-api
+# ioBroker.rest-api-test
 
-[![NPM version](https://img.shields.io/npm/v/iobroker.nibe-rest-api.svg)](https://www.npmjs.com/package/iobroker.nibe-rest-api)
-[![Downloads](https://img.shields.io/npm/dm/iobroker.nibe-rest-api.svg)](https://www.npmjs.com/package/iobroker.nibe-rest-api)
-![Number of Installations](https://iobroker.live/badges/nibe-rest-api-installed.svg)
-![Current version in stable repository](https://iobroker.live/badges/nibe-rest-api-stable.svg)
+[![NPM version](https://img.shields.io/npm/v/iobroker.rest-api-test.svg)](https://www.npmjs.com/package/iobroker.rest-api-test)
+[![Downloads](https://img.shields.io/npm/dm/iobroker.rest-api-test.svg)](https://www.npmjs.com/package/iobroker.rest-api-test)
+![Number of Installations](https://iobroker.live/badges/rest-api-test-installed.svg)
+![Current version in stable repository](https://iobroker.live/badges/rest-api-test-stable.svg)
 
-[![NPM](https://nodei.co/npm/iobroker.nibe-rest-api.png?downloads=true)](https://nodei.co/npm/iobroker.nibe-rest-api/)
+[![NPM](https://nodei.co/npm/iobroker.rest-api-test.png?downloads=true)](https://nodei.co/npm/iobroker.rest-api-test/)
 
-**Tests:** ![Test and Release](https://github.com/maxik690/ioBroker.nibe-rest-api/workflows/Test%20and%20Release/badge.svg)
+**Tests:** ![Test and Release](https://github.com/Moratie/ioBroker.nibe-rest-api-test/workflows/Test%20and%20Release/badge.svg)
 
-## nibe-rest-api adapter for ioBroker
+## rest-api-test adapter for ioBroker
 
 Read and write datapoints of your Nibe Heatpump via REST API (integrated from Firmware 4.6.4). Developed with my Nibe S1155.
 
@@ -53,13 +53,13 @@ You can check other adapters for examples or ask in the developer community. Usi
 
 You are almost done, only a few steps left:
 
-1. Create a new repository on GitHub with the name `ioBroker.nibe-rest-api`
+1. Create a new repository on GitHub with the name `ioBroker.nibe-rest-api-test`
 
 1. Push all files to the GitHub repo. The creator has already set up the local repository for you:
     ```bash
     git push origin main
     ```
-1. Add a new secret under https://github.com/maxik690/ioBroker.nibe-rest-api/settings/secrets. It must be named `AUTO_MERGE_TOKEN` and contain a personal access token with push access to the repository, e.g. yours. You can create a new token under https://github.com/settings/tokens.
+1. Add a new secret under https://github.com/Moratie/ioBroker.nibe-rest-api-test/settings/secrets. It must be named `AUTO_MERGE_TOKEN` and contain a personal access token with push access to the repository, e.g. yours. You can create a new token under https://github.com/settings/tokens.
 
 1. Head over to [src/main.ts](src/main.ts) and start programming!
 

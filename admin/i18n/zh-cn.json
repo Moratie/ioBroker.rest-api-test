@@ -1,5 +1,5 @@
 {
-    "nibe-rest-api adapter settings": "nibe-rest-api的适配器设置",
+    "rest-api-test adapter settings": "rest-api-test的适配器设置",
     "Base URL": "基础 URL",
     "Example: https://192.168.2.107:8443": "示例：https://192.168.2.107:8443",
     "Username": "用户名",

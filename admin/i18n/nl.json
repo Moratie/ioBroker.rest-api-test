@@ -1,5 +1,5 @@
 {
-    "nibe-rest-api adapter settings": "Adapterinstellingen voor nibe-rest-api",
+    "rest-api-test adapter settings": "Adapterinstellingen voor rest-api-test",
     "Base URL": "Basis-URL",
     "Example: https://192.168.2.107:8443": "Voorbeeld: https://192.168.2.107:8443",
     "Username": "Gebruikersnaam",
